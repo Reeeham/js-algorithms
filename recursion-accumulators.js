@@ -14,7 +14,7 @@ function joinElements(array, joinString) {
     return recurse(0, '');
 }
 
-//stack game
+//call stack game
 // function recurse(index, resultSoFar) {
 //     //0 , ''
 //     resultSoFar += array[index]; //'s'
@@ -56,3 +56,16 @@ function joinElements(array, joinString) {
 //     }
 // }
 joinElements(['s','cr','t cod',' :) :)'],'e')
+
+
+//rewrite joinElements function so that it uses a loop rather than recursion
+
+function joinElements(array, joinString) {
+    let resultSoFar = ''
+
+    for(let i =0; i<= array.length-1; i++) {
+        resultSoFar += array[i] + joinString;
+    }
+
+    return resultSoFar;
+}
